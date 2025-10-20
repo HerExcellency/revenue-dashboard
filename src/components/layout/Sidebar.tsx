@@ -32,12 +32,13 @@ export function Sidebar() {
             <IconButton
               key={index}
               aria-label={item.label}
-              icon={<Icon size={20} />}
               variant="ghost"
               size="sm"
               color="gray.500"
               _hover={{ color: 'gray.700', bg: 'gray.100' }}
-            />
+            >
+              <Icon size={20} />
+            </IconButton>
           );
         })}
       </VStack>

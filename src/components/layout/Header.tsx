@@ -85,7 +85,6 @@ export function Header() {
                   _hover={{
                     bg: item.active ? 'black' : 'gray.50',
                   }}
-                  leftIcon={<Icon size={16} />}
                   size="sm"
                   fontWeight="normal"
                   borderRadius="full"
@@ -96,7 +95,10 @@ export function Header() {
                     }
                   }}
                 >
-                  {item.name}
+                  <Flex align="center" gap={2}>
+                    <Icon size={16} />
+                    {item.name}
+                  </Flex>
                 </Button>
               );
             })}
@@ -113,9 +115,11 @@ export function Header() {
                   borderRadius="full"
                   px={4}
                   _hover={{ bg: 'gray.800' }}
-                  rightIcon={<ChevronDown size={16} />}
                 >
-                  Link in Bio
+                  <Flex align="center" gap={2}>
+                    Link in Bio
+                    <ChevronDown size={16} />
+                  </Flex>
                 </Button>
 
                 {/* Dropdown Menu */}
@@ -176,20 +180,22 @@ export function Header() {
           <Flex align="center" gap={2}>
             <IconButton
               aria-label="Notifications"
-              icon={<Bell size={18} />}
               variant="ghost"
               size="sm"
               borderRadius="full"
               color="gray.600"
-            />
+            >
+              <Bell size={18} />
+            </IconButton>
             <IconButton
               aria-label="Messages"
-              icon={<MessageSquare size={18} />}
               variant="ghost"
               size="sm"
               borderRadius="full"
               color="gray.600"
-            />
+            >
+              <MessageSquare size={18} />
+            </IconButton>
             <Box
               w={8}
               h={8}
