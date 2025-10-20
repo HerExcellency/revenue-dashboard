@@ -89,16 +89,17 @@ export function Header() {
                   fontWeight="normal"
                   borderRadius="full"
                   px={4}
+                  display="flex"
+                  alignItems="center"
+                  gap={2}
                   onClick={() => {
                     if (item.name === 'Apps') {
                       setIsAppsOpen(!isAppsOpen);
                     }
                   }}
                 >
-                  <Flex align="center" gap={2}>
-                    <Icon size={16} />
-                    {item.name}
-                  </Flex>
+                  <Icon size={16} />
+                  {item.name}
                 </Button>
               );
             })}
@@ -114,12 +115,13 @@ export function Header() {
                   fontWeight="medium"
                   borderRadius="full"
                   px={4}
+                  display="flex"
+                  alignItems="center"
+                  gap={2}
                   _hover={{ bg: 'gray.800' }}
                 >
-                  <Flex align="center" gap={2}>
-                    Link in Bio
-                    <ChevronDown size={16} />
-                  </Flex>
+                  Link in Bio
+                  <ChevronDown size={16} />
                 </Button>
 
                 {/* Dropdown Menu */}
